@@ -1,0 +1,24 @@
+{
+  "name": "@myscope/c",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build --verbose tsconfig.json",
+    "start": "npx vite serve --mode=development --config vite.config.ts"
+  },
+  "dependencies": {
+    "@myscope/a": "^1.0.0",
+    "@myscope/b": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "5.1.6",
+    "vite": "^5.2.9"
+  }
+}

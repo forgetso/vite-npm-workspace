@@ -1,0 +1,18 @@
+{
+  "name": "@myscope/a",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build --verbose tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "5.1.6",
+    "vite": "^5.2.9"
+  }
+}
