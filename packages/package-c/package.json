@@ -13,7 +13,6 @@
     "start": "npx vite serve --mode=development --config vite.config.ts"
   },
   "dependencies": {
-    "@myscope/a": "^1.0.0",
     "@myscope/b": "^1.0.0"
   },
   "devDependencies": {
