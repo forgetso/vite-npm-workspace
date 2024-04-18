@@ -142,7 +142,7 @@ export const vitePluginWatchExternal = async (config: VitePluginWatchExternalOpt
             });
         },
         async handleHotUpdate({file, server}) {
-            log(`file', ${file}`);
+            log(`File', ${file}`);
 
             const tsconfigPath = externalFiles[file]
             if (!tsconfigPath) {
@@ -153,9 +153,8 @@ export const vitePluginWatchExternal = async (config: VitePluginWatchExternalOpt
             const fileExtension = path.extname(file);
             const loader = getLoader(fileExtension);
             const outdir = getOutDir(file, tsconfig)
-            log(tsconfig.compilerOptions.rootDir)
             const outfile = getOutFile(outdir, file, fileExtension)
-            log(`outfile ${outfile}`)
+            log(`Outfile ${outfile}`)
             const buildResult = await build({
                 tsconfig: tsconfigPath,
                 stdin: {
