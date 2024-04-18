@@ -5,6 +5,7 @@ import {packageAfn} from "@myscope/a";
 const main = async () => {
     packageAfn();
     packageBfn();
+    console.log("aaaaadadaaaa")
     // sleep
     await new Promise((resolve) => setTimeout(resolve, 1000000000));
 }

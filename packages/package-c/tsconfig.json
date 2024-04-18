@@ -3,11 +3,16 @@
     "compilerOptions": {
         "rootDir": "./src",
         "outDir": "./dist",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "esModuleInterop": true,
     },
     "include": ["src", "src/**/*.json"],
 
     "references": [
-        { "path": "../package-a" },
-        { "path": "../package-b" }
+        { "path": "../package-b" },
+        { "path": "../vite-plugin-npm-workspaces" }
     ]
 }

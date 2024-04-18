@@ -10,13 +10,15 @@
   },
   "scripts": {
     "build": "tsc --build --verbose tsconfig.json",
-    "start": "npx vite serve --mode=development --config vite.config.ts"
+    "start": "npx vite serve --mode=development --config vite.config.ts --debug"
   },
   "dependencies": {
     "@myscope/b": "^1.0.0"
   },
   "devDependencies": {
+    "@myscope/vite-plugin-npm-workspaces": "^1.0.0",
     "@types/node": "^20.12.7",
+    "fast-glob": "^3.3.2",
     "typescript": "5.1.6",
     "vite": "^5.2.9"
   }

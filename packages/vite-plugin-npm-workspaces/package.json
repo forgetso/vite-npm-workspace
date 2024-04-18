@@ -1,0 +1,22 @@
+{
+  "name": "@myscope/vite-plugin-npm-workspaces",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build --verbose tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20.12.7",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "debug": "^4.3.4"
+  }
+}

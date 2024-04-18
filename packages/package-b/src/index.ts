@@ -1,9 +1,11 @@
-import { packageAfn } from '@myscope/a';
-
-export const packageBfn = () => {
-    console.log('packageBfn');
-}
-
-export const packageBAfn = () => {
-    packageAfn();
-}
+import { packageAfn } from "@myscope/a";
+const packageBfn = () => {
+  window.alert("oi changed again");
+};
+const packageBAfn = () => {
+  packageAfn();
+};
+export {
+  packageBAfn,
+  packageBfn
+};

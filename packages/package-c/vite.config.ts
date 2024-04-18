@@ -1,13 +1,21 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
+import * as path from "node:path";
+import { vitePluginWatchExternal } from "@myscope/vite-plugin-npm-workspaces";
 
-export default defineConfig( {
-    build: {
-        lib: {
-            entry: 'src/index.ts',
-            name: 'package-a'
+export default async function () {
+    const pluginExternal = await vitePluginWatchExternal({
+        workspaceRoot: path.resolve('../..'),
+        format: 'esm'
+    })
+    console.log("pluginExternal", pluginExternal)
+    return defineConfig({
+        build: {
+            lib: {
+                entry: 'src/index.ts',
+                name: '@myscope/c'
+            },
         },
-    },
-    resolve: {
-        preserveSymlinks: true // this is the fix!
-    }
-})
+        plugins: [pluginExternal],
+
+    })
+}
